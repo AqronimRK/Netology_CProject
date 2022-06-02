@@ -1,0 +1,11 @@
+/venv
+
+Oauth_token.json
+
+service_acc_token.json
+
+ToGoogle.py
+
+YaToken.txt
+
+/*.idea
