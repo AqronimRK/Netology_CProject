@@ -1,9 +1,10 @@
+import json
+
 from Modules.VK import FromVK
 from Modules.Yandex import ToYandex
 from Modules import VK
 from pprint import pprint
 from datetime import datetime
-import json
 
 vk_id_input = input('Введите id или короткое имя пользователя: ')
 vk_user = FromVK(vk_id_input)
