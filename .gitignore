@@ -10,4 +10,6 @@ YaToken.txt
 
 /*.idea
 
-/Result json
+/ResultJSON
+
+.gitignore

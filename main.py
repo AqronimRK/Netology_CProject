@@ -56,10 +56,9 @@ for photo in photo_user_dict[:int(count_photo)]:
         likes_url_dict[f'{likes} {date}.jpg'] = photo_url
         json_list.append({'file_name': f'{likes} {date}.jpg', 'size': size})
 
-with open('Result json/photo_data.json', 'w') as datafile:
+with open('ResultJSON/photo_data.json', 'w') as datafile:
     json.dump(json_list, datafile, indent=4)
 
-pprint(likes_url_dict)
 yandex_token = input('Введите токен для доступа к Яндекс.Диску: ')
 yandex_user = ToYandex(yandex_token)
 yandex_user.upload_photo(likes_url_dict)
