@@ -3,8 +3,8 @@ from progress.bar import IncrementalBar
 
 
 class ToYandex:
-    def __init__(self):
-        self.ya_token = input('Введите OAuth токен к Яндекс.Диску: ')
+    def __init__(self, ya_token):
+        self.ya_token = ya_token
         self.yandex_headers = {'Content-type': 'application/json', 'Authorization': f'OAuth {self.ya_token}'}
 
     def _create_direct(self, directory_name=''):
@@ -23,4 +23,3 @@ class ToYandex:
             requests.post(upload_query, headers=self.yandex_headers, params=params)
             status_bar.next()
         status_bar.finish()
-        return print('Upload success')
